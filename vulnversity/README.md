@@ -1,6 +1,6 @@
 # Vulnversity Write-Up
 
-![]()
+![](https://github.com/catx0rr/tryhackme/blob/master/vulnversity/images/vulnversity.png)
 
 Vulnversity is a Easy machine on tryhackme. This is a beginner level box to learn about recon, web app attacks and basic privilege escalation
 ---
