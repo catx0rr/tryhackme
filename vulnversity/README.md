@@ -63,7 +63,7 @@ http://ip_address:3333/robots.txt
 
 ![](https://github.com/catx0rr/tryhackme/blob/master/vulnversity/images/robots.txt.png)
 
-We can't find any hidden directories. Our goal here is to find any web pages where we can upload our reverse shell to gain initial access to the server. There's a lot of tools available. But on this write-up I'll use gobuster.
+We can't find any hidden directories. Let's try to find any vulnerabilities on the web pages we will find using our toolset where possibly we can upload our reverse shell to gain initial access to the server. There's a lot of tools available. But on this write-up I'll use gobuster.
 
 If you are using kali 2020.2 you just need to run
 ```
