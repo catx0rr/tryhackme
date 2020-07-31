@@ -138,7 +138,7 @@ So now we have created a php reverse shell try and upload it on the server. We e
 
 ![](https://github.com/catx0rr/tryhackme/blob/master/vulnversity/images/extension_not_allowed.png)
 
-The extension is not allowed. This is a common filtering to ensure that no other files can be uploaded on the server. But let us use BurpSuite to check what file extenstion can be uploaded on the server.
+The extension is not allowed. This is a common filtering to ensure that no malicious codes can be uploaded on the server. But let us use BurpSuite to check for vulnerability and what might be a file extenstion can be uploaded on the server.
 
 Following task 4 on Vulnversity, we will customized our attack by creating a simple dictionary for file extensions on burpsuite.
 
