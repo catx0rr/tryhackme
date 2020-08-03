@@ -53,7 +53,7 @@ NTLM => 1DFECA0C002AE40B8619ECF94819CC1B
 ```
 hashcat -a 0 -m 1000 ntlm.hash /usr/share/wordlists/rockyou.txt --force -O
 ```
-sha512crypt (UNIX) (5rounds) => $6$aReallyHardSalt$6WKUTqzq.UQQmrm0p/T7MPpMbGNnzXPMAXi4bJMl9be.cfi3/qxIf.hsGpS41BqMhSrHVXgMpdjS6xeKZAs02. 
+sha512crypt(UNIX) => $6$aReallyHardSalt$6WKUTqzq.UQQmrm0p/T7MPpMbGNnzXPMAXi4bJMl9be.cfi3/qxIf.hsGpS41BqMhSrHVXgMpdjS6xeKZAs02. 
 ```
 hashcat -a 0 -m 1800 sha512crypt.hash /usr/share/wordlists/rockyou.txt --force -O
 ```
