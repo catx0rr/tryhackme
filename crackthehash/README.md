@@ -37,7 +37,7 @@ hashcat -a 0 -m 3200 bcrypt.hash /usr/share/wordlists/rockyou.txt --force -O
 
 MD4 => 279412f945939ba78ce0758d3fd83daa
 ```
-hashcat -a 0 -m 900 md4.hash /usr/share/wordlists/rockyou.txt --force -O
+crackstation.net
 ```
 
 ---
