@@ -34,7 +34,7 @@ find / -type f -user new-user -exec ls -ldb {} \; 2>/dev/null | awk -F" " '{prin
 
 Which file's owner has ID of 502?
 ```
-find / -type f -user 502 2>/dev/null | xargs echo | cut -d' ' -f22
+find / -type f -user 502 2>/dev/null | xargs echo | cut -d' ' -f2
 ```
 > Answer: X1Uy
 
