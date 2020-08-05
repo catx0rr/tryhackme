@@ -6,6 +6,24 @@
 
 ### Tasks
 
+```
+Answer the questions about the following files:
+
+8V2L
+bny0
+c4ZX
+D8B3
+FHl1
+oiMO
+PFbD
+rmfX
+SRSq
+uqyw
+v2Vb
+X1Uy
+
+The aim is to answer the questions as efficiently as possible.
+```
 	
 Which of the above files are owned by the best-group group(enter the answer separated by spaces in alphabetical order)
 ```
